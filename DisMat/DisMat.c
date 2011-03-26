@@ -22,17 +22,21 @@
 #include <unistd.h>
 #include <readline/readline.h>
 #include <readline/history.h>
+#include "Functions.c"
 
+/*
 static unsigned int quit = 0;
 static unsigned int verbose = 0;
+*/
 
 int main (int argc, const char * argv[])
 {
     printf("---Welcome to DisMat---\n");
-    printf("To find the shell usage info type /help");
-    int subset(char zerosbst,int gen);
-    
-    return 0;
+    printf("To find the shell usage info type /help\n");
+    //subset();
+    //combinatorial();
+    sigma();
+    return EXIT_SUCCESS;
 }
 
 void shell_usage() {
@@ -42,7 +46,7 @@ void shell_usage() {
 	printf("\t/help\t\tShow this help.\n");
 	printf("\t/exit\t\tExit interactive shell.\n");
 }
-
+/*
 void parse_command(unsigned char* command, unsigned int size) {
 	char* cmd = strdup(command);
 	char* action = strtok(cmd, " ");
@@ -57,3 +61,4 @@ void parse_command(unsigned char* command, unsigned int size) {
         
 	free(action);
 }
+*/

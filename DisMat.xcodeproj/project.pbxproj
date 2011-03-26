@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		548CB02C133B9C7500D7E407 /* DisMat.c in Sources */ = {isa = PBXBuildFile; fileRef = 548CB02B133B9C7500D7E407 /* DisMat.c */; };
-		548CB035133BA61900D7E407 /* Functions.c in Sources */ = {isa = PBXBuildFile; fileRef = 548CB033133BA61900D7E407 /* Functions.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -117,7 +116,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				548CB02C133B9C7500D7E407 /* DisMat.c in Sources */,
-				548CB035133BA61900D7E407 /* Functions.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +195,7 @@
 				548CB032133B9C7500D7E407 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

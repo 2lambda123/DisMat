@@ -20,11 +20,10 @@
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
 
-
 #ifdef __cplusplus
 extern "C" {
 #endif
-    
+    /*
 #ifndef WIN32
 #include <windows.h>
 #else
@@ -32,7 +31,7 @@ extern "C" {
 #include <windows.h>
 #define sleep(n) Sleep(1000 * n)
 #endif
-
+*/
 #ifdef __cplusplus
 }
 #endif
