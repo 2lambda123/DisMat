@@ -11,17 +11,35 @@
 #include <cmath>
 #include <cstdlib>
 #include <cstring>
+#include <algorithm>
 #include "Functions.h"
 
 #define EVALUE 2.71828183
 #define PIVALUE 3.14159265
 
-int factorial( int n )
+unsigned int factorial(unsigned int n )
 {
     if ( n <= 1 )
         return 1;
     else
         return  n * factorial( n-1 );
+}
+
+unsigned int uipow(unsigned int base,unsigned int exp)
+{
+    unsigned int result = 1;
+    while (exp)
+    {
+        if (exp & 1)
+            result *= base;
+        exp >>= 1;
+        base *= base;
+    }
+    if(exp==0){
+        result=base;
+    }
+    
+    return result;
 }
 
 /*
@@ -39,12 +57,12 @@ public:
     switch (zerosbst){
             
         case 'y':
-            rslt = pow(2, gen) - 1;
+            rslt = uipow(2, gen) - 1;
             int rslt = rslt;
             printf("%d", rslt);
             break;
         case 'n':
-            rslt = pow(2, gen);
+            rslt = uipow(2, gen);
             //printf("%f", rslt);
             break;
         default:
@@ -66,12 +84,12 @@ int subset(void){
     switch (zerosbst){
         
         case 'y':
-            rslt = pow(2, gen) - 1;
+            rslt = uipow(2, gen) - 1;
             int rslt = rslt;
             printf("%d", rslt);
             break;
         case 'n':
-            rslt = pow(2, gen);
+            rslt = uipow(2, gen);
             //printf("%f", rslt);
             break;
         default:
@@ -119,7 +137,7 @@ unsigned int sigma(void){
     }
     if(pw==1)printf("%d", ttl);
     if(pw>1){
-        ttl=pow(ttl, pw);
+        ttl=uipow(ttl, pw);
         printf("%d", ttl);
     }
     if(pw==0)puts("1");
@@ -134,7 +152,18 @@ unsigned int stirling(void){
     return EXIT_SUCCESS;
 }
 
-unsigned int IncExc(void){
-    std::cout << "Enter the Mass number: " <<std::endl;
-    std::cin >> 
+unsigned int twinprdx(void){
+    int i, mass;
+    unsigned int top=1;
+    std::cout << "Enter the mass elements number"<<std::endl;
+    std::cin >> mass; 
+    for (i=366; i>0; i--) {
+        top*=i;
+    }
+    std::cout << top/uipow(366, mass);
+    return EXIT_SUCCESS;
+}
+
+unsigned int binomial(void){
+    
 }
