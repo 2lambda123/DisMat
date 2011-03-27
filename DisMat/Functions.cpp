@@ -42,6 +42,19 @@ unsigned int uipow(unsigned int base,unsigned int exp)
     return result;
 }
 
+unsigned int itrtvefact(unsigned int itrtnum){
+    struct def {
+        unsigned int itrtnum;
+        unsigned int i;
+        unsigned int total;
+    };
+    def def1;
+    for (def1.i=def1.itrtnum;def1.i>0; def1.i--) {
+        def1.total*=factorial(itrtnum);
+    }
+    return def1.total;
+}
+
 /*
 class subset {
     char zerosbst;
@@ -156,14 +169,24 @@ unsigned int twinprdx(void){
     int i, mass;
     unsigned int top=1;
     std::cout << "Enter the mass elements number"<<std::endl;
-    std::cin >> mass; 
-    for (i=366; i>0; i--) {
+    std::cin >> mass;
+    std::cout << std::endl;
+    for (i=366; i>366-mass; i--) {
         top*=i;
     }
     std::cout << top/uipow(366, mass);
     return EXIT_SUCCESS;
 }
 
-unsigned int binomial(void){
-    
+unsigned int distpres(void){
+    unsigned int factpresnum, presnum;
+    std::cout<<"Enter the present number: " << std::endl;
+    std::cin >> presnum;
+    std::cout << std::endl;
+    factpresnum = factorial(presnum);
+    std::cout << factpresnum/itrtvefact(presnum);
+    return EXIT_SUCCESS;
 }
+
+
+
