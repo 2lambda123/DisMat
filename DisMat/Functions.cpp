@@ -188,5 +188,43 @@ unsigned int distpres(void){
     return EXIT_SUCCESS;
 }
 
+long fib(unsigned long n) {
+    if (n <= 1) {
+        return n;
+    } else {
+        return fib(n-1)+fib(n-2);
+    }
+}
+
+void printRow(const int binary[],int SIZE, int low, int mid, int high){
+    int i;
+    for (i=0; i < SIZE; i++) {
+        if (i <low || i > high) {
+            printf("     ");
+        } else if(i == mid){
+            printf("%3d*", binary[i]);
+        } else{
+            printf("%3d ", binary[i]);
+        }
+    }
+    puts("");
+}
+
+int binarySearch(const int binary[], int SIZE,int searchKey, int low, int high){
+    int middle;
+    while (low<=high) {
+        middle=(low+high)/2;
+        printRow(binary, SIZE, low, middle, high);
+        if (searchKey == binary[middle]) {
+            return middle;
+        } else if(searchKey <= binary[middle]){
+            high=middle-1;
+        }
+        else{
+            low=middle+1;
+        }
+    }
+    return -1;
+}
 
 
