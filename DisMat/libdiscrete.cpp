@@ -17,6 +17,7 @@
 #define EVALUE 2.71828183
 #define PIVALUE 3.14159265
 
+//Factorial calculation (unsigned)
 unsigned int factorial(unsigned int n )
 {
     if ( n <= 1 )
@@ -25,6 +26,7 @@ unsigned int factorial(unsigned int n )
         return  n * factorial( n-1 );
 }
 
+//Unsigned int power
 unsigned int uipow(unsigned int base,unsigned int exp)
 {
     unsigned int result = 1;
@@ -42,6 +44,7 @@ unsigned int uipow(unsigned int base,unsigned int exp)
     return result;
 }
 
+//Iterative Factorial
 unsigned int itrtvefact(unsigned int itrtnum){
     struct def {
         unsigned int itrtnum;
@@ -112,7 +115,7 @@ int subset(void){
     return EXIT_SUCCESS;
 }
 */
-
+//Combinatorial problems solver
 unsigned int combinatorial(void){
     //Kullanıcı double girerse handle et
     unsigned int sbstGivenSize=0, glb=0, ksb=0;
@@ -133,6 +136,7 @@ jmp:
     
 }
 
+//Linear signum function
 unsigned int sigma(void){
     unsigned int i,inta=0, intb=0, intx=0, pw=0;
     puts("Usage:\nax+b is a linear system and a(pos.integer) and\nb(pos.integer) are induction rule of signum function\n");
@@ -157,6 +161,7 @@ unsigned int sigma(void){
     return EXIT_SUCCESS;
 }
 
+//Stirling evaluation
 unsigned int stirling(void){
     int strln=0;
     std::cout << "Enter the stirling n: " << std::endl;
@@ -165,6 +170,7 @@ unsigned int stirling(void){
     return EXIT_SUCCESS;
 }
 
+//Solution for Twin Paradox problem
 unsigned int twinprdx(void){
     int i, mass;
     unsigned int top=1;
@@ -178,6 +184,7 @@ unsigned int twinprdx(void){
     return EXIT_SUCCESS;
 }
 
+//Soultion for distributing presents problem
 unsigned int distpres(void){
     unsigned int factpresnum, presnum;
     std::cout<<"Enter the present number: " << std::endl;
@@ -188,6 +195,7 @@ unsigned int distpres(void){
     return EXIT_SUCCESS;
 }
 
+//Recursive iterative (expanded long type)
 long fib(unsigned long n) {
     if (n <= 1) {
         return n;
@@ -196,6 +204,7 @@ long fib(unsigned long n) {
     }
 }
 
+//For all binary search operation simple print line
 void printRow(const int binary[],int SIZE, int low, int mid, int high){
     int i;
     for (i=0; i < SIZE; i++) {
@@ -210,7 +219,8 @@ void printRow(const int binary[],int SIZE, int low, int mid, int high){
     puts("");
 }
 
-int binarySearch(const int binary[], int SIZE,int searchKey, int low, int high){
+//Simple binary search
+signed long long int binarySearch(const int binary[], int SIZE,int searchKey, int low, int high){
     int middle;
     while (low<=high) {
         middle=(low+high)/2;
@@ -226,5 +236,9 @@ int binarySearch(const int binary[], int SIZE,int searchKey, int low, int high){
     }
     return -1;
 }
-
+//Bird's Eye View
+unsigned long long int birdseye(){
+    
+    return 0;
+}
 

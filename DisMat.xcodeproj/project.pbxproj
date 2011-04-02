@@ -26,7 +26,7 @@
 		548CB027133B9C7500D7E407 /* DisMat */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DisMat; sourceTree = BUILT_PRODUCTS_DIR; };
 		548CB02D133B9C7500D7E407 /* DisMat.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = DisMat.1; sourceTree = "<group>"; };
 		548CB034133BA61900D7E407 /* Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
-		54B77AA8133E239C003DB303 /* Functions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Functions.cpp; sourceTree = "<group>"; };
+		54B77AA8133E239C003DB303 /* libdiscrete.cpp */ = {isa = PBXFileReference; fileEncoding = 4; path = libdiscrete.cpp; sourceTree = "<group>"; };
 		54B77AAA133E2506003DB303 /* DisMat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DisMat.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,7 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				54B77AAA133E2506003DB303 /* DisMat.cpp */,
-				54B77AA8133E239C003DB303 /* Functions.cpp */,
+				54B77AA8133E239C003DB303 /* libdiscrete.cpp */,
 				548CB02D133B9C7500D7E407 /* DisMat.1 */,
 				548CB034133BA61900D7E407 /* Functions.h */,
 			);

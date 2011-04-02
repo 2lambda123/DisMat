@@ -22,7 +22,7 @@
 #include <unistd.h>
 #include <readline/readline.h>
 #include <readline/history.h>
-#include "Functions.cpp"
+#include "libdiscrete.cpp"
 /*
 static unsigned int quit = 0;
 static unsigned int verbose = 0;
