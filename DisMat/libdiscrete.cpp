@@ -27,7 +27,7 @@ unsigned int factorial(unsigned int n )
 }
 
 //Unsigned int power
-unsigned int uipow(unsigned int base,unsigned int exp)
+unsigned int uiPow(unsigned int base,unsigned int exp)
 {
     unsigned int result = 1;
     while (exp)
@@ -45,7 +45,7 @@ unsigned int uipow(unsigned int base,unsigned int exp)
 }
 
 //Iterative Factorial
-unsigned int itrtvefact(unsigned int itrtnum){
+unsigned int iterativeFact(unsigned int itrtnum){
     struct def {
         unsigned int itrtnum;
         unsigned int i;
@@ -154,7 +154,7 @@ unsigned int sigma(void){
     }
     if(pw==1)printf("%d", ttl);
     if(pw>1){
-        ttl=uipow(ttl, pw);
+        ttl=uiPow(ttl, pw);
         printf("%d", ttl);
     }
     if(pw==0)puts("1");
@@ -171,7 +171,7 @@ unsigned int stirling(void){
 }
 
 //Solution for Twin Paradox problem
-unsigned int twinprdx(void){
+unsigned int twinPrdx(void){
     int i, mass;
     unsigned int top=1;
     std::cout << "Enter the mass elements number"<<std::endl;
@@ -180,23 +180,23 @@ unsigned int twinprdx(void){
     for (i=366; i>366-mass; i--) {
         top*=i;
     }
-    std::cout << top/uipow(366, mass);
+    std::cout << top/uiPow(366, mass);
     return EXIT_SUCCESS;
 }
 
 //Soultion for distributing presents problem
-unsigned int distpres(void){
+unsigned int distPres(void){
     unsigned int factpresnum, presnum;
     std::cout<<"Enter the present number: " << std::endl;
     std::cin >> presnum;
     std::cout << std::endl;
     factpresnum = factorial(presnum);
-    std::cout << factpresnum/itrtvefact(presnum);
+    std::cout << factpresnum/iterativeFact(presnum);
     return EXIT_SUCCESS;
 }
 
-//Recursive iterative (expanded long type)
-long fib(unsigned long n) {
+//Recursive iterative fibonacci(expanded long type)
+unsigned long long int fib(unsigned long int n) {
     if (n <= 1) {
         return n;
     } else {
@@ -237,8 +237,45 @@ signed long long int binarySearch(const int binary[], int SIZE,int searchKey, in
     return -1;
 }
 //Bird's Eye View
-unsigned long long int birdseye(){
-    
-    return 0;
+unsigned long long int birdsEye(unsigned long int n, unsigned long int k){
+    return ((n-k)/(k+1));
 }
 
+unsigned long long int eagleView(unsigned long int m, unsigned
+                                 long int t){
+    //m variable represents n=2m and then m is a positive integer
+    //t variable represents t steps from the middle
+    return pow(EVALUE, (t*t)/m);
+}
+
+unsigned long long int sumOfFib(unsigned long int N){
+   return fib(N+2)-1;
+}
+
+unsigned long long int fibFormula(long int n){
+    return (1/sqrt(5))*(powl(((1+sqrt(5))/2), n)-powl(((1-sqrt(5))/2), n));
+}
+
+unsigned long long int isPrime(unsigned long int nb){
+    int i, count, test;
+    test = count = 0;
+    if (nb != 1)
+        return -1;
+    
+    for (i = 2; i < nb; i++, count++)
+        if (nb % i == 0)
+            test = 1;
+    if (!test)
+        return 1;
+    else
+        return 0;
+}
+
+unsigned long long int fermatLittle(unsigned int p, unsigned int a){
+    if(p%(uiPow(a, (p-1))-1)==0){
+        return 0;
+    }
+    else{
+        return 1;
+    }
+}
