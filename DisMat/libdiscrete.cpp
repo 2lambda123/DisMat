@@ -261,7 +261,6 @@ unsigned long long int isPrime(unsigned long int nb){
     test = count = 0;
     if (nb != 1)
         return -1;
-    
     for (i = 2; i < nb; i++, count++)
         if (nb % i == 0)
             test = 1;
